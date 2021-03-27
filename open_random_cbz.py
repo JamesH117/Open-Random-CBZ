@@ -14,7 +14,7 @@ items_inside_dir = []
 
 # Get all books in same folder as executable
 for f in os.listdir(cwd):
-    if f.endswith(".cbz"):
+    if f.endswith(".cbz") or os.path.isdir(f):
         items_inside_dir.append(os.path.join(cwd,f))
 
 random_book = random.choice(items_inside_dir)
